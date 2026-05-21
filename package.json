@@ -1,0 +1,50 @@
+{
+  "name": "mcpalette",
+  "version": "0.1.0",
+  "description": "Least-context tool palettes for AI agents and MCP tool catalogs.",
+  "type": "module",
+  "bin": {
+    "mcpalette": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "tool-selection",
+    "guardrails",
+    "prompt-injection",
+    "context-engineering"
+  ],
+  "author": "mikebfox",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikebfox/mcpalette.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikebfox/mcpalette/issues"
+  },
+  "homepage": "https://github.com/mikebfox/mcpalette#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}
