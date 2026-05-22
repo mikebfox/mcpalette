@@ -14,8 +14,10 @@ Agent runtimes are getting more tools, more autonomy, and more risk surface. Exp
 
 ## Install
 
+`mcpalette` is not published to the npm registry yet. Install it from GitHub:
+
 ```sh
-npm install mcpalette
+npm install -D github:mikebfox/mcpalette
 ```
 
 Requires Node.js 20 or newer.
@@ -55,19 +57,19 @@ console.log(formatToolBrief(palette));
 ## CLI usage
 
 ```sh
-mcpalette tools.json --task "find recent GitHub issues" --max-tools 4 --budget 1200
+npm exec mcpalette -- tools.json --task "find recent GitHub issues" --max-tools 4 --budget 1200
 ```
 
 Use stdin when you do not want a file path:
 
 ```sh
-cat tools.json | mcpalette --task "summarize release notes" --brief
+cat tools.json | npm exec mcpalette -- --task "summarize release notes" --brief
 ```
 
 Machine-readable output:
 
 ```sh
-mcpalette tools.json --task "triage a repository" --json
+npm exec mcpalette -- tools.json --task "triage a repository" --json
 ```
 
 ## Input shape
