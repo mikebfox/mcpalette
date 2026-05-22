@@ -4,7 +4,7 @@
   "description": "Least-context tool palettes for AI agents and MCP tool catalogs.",
   "type": "module",
   "bin": {
-    "mcpalette": "./dist/cli.js"
+    "mcpalette": "dist/cli.js"
   },
   "exports": {
     ".": {
